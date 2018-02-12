@@ -1,0 +1,75 @@
+|tempsensor
+ARDUINO_IO[0] <> <UNC>
+ARDUINO_IO[1] <> <UNC>
+ARDUINO_IO[2] <> <UNC>
+ARDUINO_IO[3] <> <UNC>
+ARDUINO_IO[4] <> <UNC>
+ARDUINO_IO[5] <> <UNC>
+ARDUINO_IO[6] <> <UNC>
+ARDUINO_IO[7] <> <UNC>
+ARDUINO_IO[8] <> <UNC>
+ARDUINO_IO[9] <> <UNC>
+ARDUINO_IO[10] <> <UNC>
+ARDUINO_IO[11] <> <UNC>
+ARDUINO_IO[12] <> <UNC>
+ARDUINO_IO[13] <> <VCC>
+ARDUINO_IO[14] <> <VCC>
+ARDUINO_IO[15] <> ARDUINO_IO[15]
+ARDUINO_RESET_N <> <UNC>
+FPGA_CLK1_50 => FPGA_CLK1_50.IN1
+FPGA_CLK2_50 => ~NO_FANOUT~
+FPGA_CLK3_50 => ~NO_FANOUT~
+KEY[0] => ~NO_FANOUT~
+KEY[1] => ~NO_FANOUT~
+LED[0] <= <GND>
+LED[1] <= <GND>
+LED[2] <= <GND>
+LED[3] <= <GND>
+LED[4] <= <GND>
+LED[5] <= <GND>
+LED[6] <= <GND>
+LED[7] <= <GND>
+SW[0] => ~NO_FANOUT~
+SW[1] => ~NO_FANOUT~
+SW[2] => ~NO_FANOUT~
+SW[3] => ~NO_FANOUT~
+
+
+|tempsensor|i2cclock:i2cclk
+in_clock => CLK.CLK
+in_clock => COUNT[0].CLK
+in_clock => COUNT[1].CLK
+in_clock => COUNT[2].CLK
+in_clock => COUNT[3].CLK
+in_clock => COUNT[4].CLK
+in_clock => COUNT[5].CLK
+in_clock => COUNT[6].CLK
+in_clock => COUNT[7].CLK
+in_clock => COUNT[8].CLK
+in_clock => COUNT[9].CLK
+in_clock => COUNT[10].CLK
+divisor[0] => LessThan0.IN11
+divisor[1] => LessThan0.IN10
+divisor[2] => LessThan0.IN9
+divisor[3] => LessThan0.IN8
+divisor[4] => LessThan0.IN7
+divisor[5] => LessThan0.IN6
+divisor[6] => LessThan0.IN5
+divisor[7] => LessThan0.IN4
+divisor[8] => LessThan0.IN3
+divisor[9] => LessThan0.IN2
+cs => CLK.ENA
+cs => COUNT[0].ENA
+cs => COUNT[1].ENA
+cs => COUNT[2].ENA
+cs => COUNT[3].ENA
+cs => COUNT[4].ENA
+cs => COUNT[5].ENA
+cs => COUNT[6].ENA
+cs => COUNT[7].ENA
+cs => COUNT[8].ENA
+cs => COUNT[9].ENA
+cs => COUNT[10].ENA
+i2cclk <= CLK.DB_MAX_OUTPUT_PORT_TYPE
+
+
